@@ -2,8 +2,9 @@ steps:
   # Step 1: Build Docker image
   - name: 'gcr.io/cloud-builders/docker'
     args: [
-      'build', '-t',
-      'us-central1-docker.pkg.dev/$PROJECT_ID/ishwarya-101023221/myapp:$COMMIT_SHA',
+      'build',
+      '-f', 'Dockerfile',
+      '-t', 'us-central1-docker.pkg.dev/$PROJECT_ID/ishwarya-101023221/myapp:$COMMIT_SHA',
       '.'
     ]
 
