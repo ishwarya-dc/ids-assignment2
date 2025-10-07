@@ -4,7 +4,7 @@ steps:
     args: [
       'build',
       '-f', 'Dockerfile',
-      '-t', 'us-central1-docker.pkg.dev/$PROJECT_ID/ishwarya-101023221/myapp:$COMMIT_SHA',
+      '-t', 'northamerica-northeast2-docker.pkg.dev/$PROJECT_ID/ishwarya-101023221/myapp:$COMMIT_SHA',
       '.'
     ]
 
@@ -12,7 +12,7 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: [
       'push',
-      'us-central1-docker.pkg.dev/$PROJECT_ID/ishwarya-101023221/myapp:$COMMIT_SHA'
+      'northamerica-northeast2-docker.pkg.dev/$PROJECT_ID/ishwarya-101023221/myapp:$COMMIT_SHA'
     ]
 
 options:
