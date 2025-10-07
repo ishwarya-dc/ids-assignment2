@@ -30,6 +30,10 @@ app.listen(PORT, '0.0.0.0', () => {
     console.log(`✅ Server running and listening on port ${PORT}`);
 });
 
+app.get('/health', (req, res) => {
+  res.status(200).send('✅ Cloud Run is up and responding!');
+});
+
 // Graceful shutdown (safe even if db isn’t initialized)
 const gracefulShutdown = () => {
     if (db && typeof db.teardown === 'function') {
